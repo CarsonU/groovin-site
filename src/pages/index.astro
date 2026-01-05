@@ -5,15 +5,15 @@ import Features from '~/components/widgets/Features.astro';
 import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
-const metadata = { title: 'Business Name | Services in City' };
+const metadata = { title: 'Groovin Embers | Fire and Flow' };
 ---
 
 <Layout metadata={metadata}>
   <Hero actions={[{ variant: 'primary', text: 'Book Us', href: '/contact' }]}>
     <Fragment slot="title">Groovin' Embers</Fragment>
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-cover bg-center bg-no-repeat" style="background-image: url('/images/hero.jpg');"></div>
-      <div class="absolute inset-0 bg-black/50"></div>
+      <div class="absolute inset-0 md:-top-[76px] md:h-[calc(100%+76px)] bg-cover bg-center bg-no-repeat" style="background-image: url('/images/hero.jpg');"></div>
+      <div class="absolute inset-0 md:-top-[76px] md:h-[calc(100%+76px)] bg-black/50"></div>
     </Fragment>
   </Hero>
 
