@@ -5,6 +5,11 @@ import Features from '~/components/widgets/Features.astro';
 import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
+import janiceFireImage1 from '../assets/images/janice-fire-1.png';
+import sophLedImage1 from '../assets/images/soph-led-1.jpg';
+import janiceDayImage1 from '../assets/images/janice-day-1.png';
+import aerialImage1 from '../assets/images/soph-janice-aerial-1.png';
+
 const metadata = { title: 'Groovin Embers | Fire and Flow' };
 ---
 
@@ -18,13 +23,16 @@ const metadata = { title: 'Groovin Embers | Fire and Flow' };
   </Hero>
 
   <!-- About Section -->
-  <Content>
+  <Content isReversed>
     <Fragment slot="content">
-      The Groovin' Embers are a female flow and fire duo that's been lighting up the East Coast for the past 5 years. We put on spectacular circus showcases that combine choreography, acrobatics, and prop mastery. Our captivating shows are completely customizable, from our costumes to stationary or roaming performances. Our skilled artists specialize in fire manipulation, aerial arts, and various flow props that are guaranteed to enchant you. We believe flow arts elevates every event, adding a truly unforgettable element. Allow us to wow you!
+      The Groovin' Embers are a female flow and fire duo that's been lighting up the East Coast for the past 5 years. 
+      We put on spectacular circus showcases that combine choreography, acrobatics, and prop mastery. Our captivating shows are completely customizable, from 
+      our costumes to stationary or roaming performances. Our skilled artists specialize in fire manipulation, aerial arts, and various flow props that 
+      are guaranteed to enchant you. We believe flow arts elevates every event, adding a truly unforgettable element. Allow us to wow you!
     </Fragment>
     <Fragment slot="image">
       <img
-        src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+        src="/images/soph-janice-1.jpg"
         alt="Fire performance"
         class="rounded-lg shadow-lg"
       />
@@ -59,7 +67,7 @@ const metadata = { title: 'Groovin Embers | Fire and Flow' };
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      src: janiceFireImage1,
       alt: 'Fire Performances',
     }}
   >
@@ -98,7 +106,7 @@ const metadata = { title: 'Groovin Embers | Fire and Flow' };
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      src: sophLedImage1,
       alt: 'LED Light Shows',
     }}
   >
@@ -129,7 +137,7 @@ const metadata = { title: 'Groovin Embers | Fire and Flow' };
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      src: janiceDayImage1,
       alt: 'Daytime Flow Performance',
     }}
   >
@@ -161,7 +169,7 @@ const metadata = { title: 'Groovin Embers | Fire and Flow' };
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      src: aerialImage1,
       alt: 'Aerial Performance',
     }}
   >
