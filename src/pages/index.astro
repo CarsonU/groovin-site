@@ -17,6 +17,7 @@ const metadata = { title: 'Business Name | Services in City' };
     </Fragment>
   </Hero>
 
+  <!-- About Section -->
   <Content>
     <Fragment slot="content">
       The Groovin' Embers are a female flow and fire duo that's been lighting up the East Coast for the past 5 years. We put on spectacular circus showcases that combine choreography, acrobatics, and prop mastery. Our captivating shows are completely customizable, from our costumes to stationary or roaming performances. Our skilled artists specialize in fire manipulation, aerial arts, and various flow props that are guaranteed to enchant you. We believe flow arts elevates every event, adding a truly unforgettable element. Allow us to wow you!
@@ -30,11 +31,154 @@ const metadata = { title: 'Business Name | Services in City' };
     </Fragment>
   </Content>
 
-  <Features title="Why Choose Us" items={[
+  <!-- Services Section -->
+
+  <!-- Fire Performance -->
+  <Content
+    id="services"
+    items={[
+      {
+        title: 'Perfect for outdoors or indoors with ceilings 9 feet or higher',
+        icon: 'tabler:home',
+      },
+      {
+        title: 'Amazing tricks and effects like fire eating, fire manipulation, and fire bubbles',
+        icon: 'tabler:flame',
+      },
+      {
+        title: 'Props that use real fire like torches, fans, staffs, hoops, and swords',
+        icon: 'tabler:wand',
+      },
+      {
+        title: 'We offer choreographed shows or roaming performances throughout your event',
+        icon: 'tabler:users',
+      },
+      {
+        title: 'We work in pairs and have safety equipment to ensure a safe fire viewing experience',
+        icon: 'tabler:shield-check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Fire Performances',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Fire Performance</h3>
+      <!-- <p class="text-muted dark:text-slate-400 mb-6">
+        Placeholder general description for fire performances.
+      </p> -->
+    </Fragment>
+  </Content>
+
+  <!-- LED Light Shows -->
+  <Content
+    isReversed
+    isAfterContent
+    items={[
+      {
+        title: 'Perfect for outdoors at night and dark indoor spaces',
+        icon: 'tabler:moon-stars',
+      },
+      {
+        title: 'Beautiful light shows and jaw dropping tricks',
+        icon: 'tabler:sparkles',
+      },
+      {
+        title: 'LED props like hoops, fans, and dragon staff',
+        icon: 'tabler:device-gamepad',
+      },
+      {
+        title: 'We offer choreographed shows or roaming performances throughout your event',
+        icon: 'tabler:music',
+      },
+      {
+        title: 'Can be done in smaller spaces where fire cannott be done',
+        icon: 'tabler:layout',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'LED Light Shows',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">LED Light Shows</h3>
+    </Fragment>
+  </Content>
+
+  <!-- Daytime Flow Arts -->
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Perfect for indoors or during the day time',
+        icon: 'tabler:sun',
+      },
+      {
+        title: 'Beautiful props that sparkle in the light or move delicately in the wind',
+        icon: 'tabler:feather',
+      },
+      {
+        title: 'Silk fans, decorated hoops, dragon staff',
+        icon: 'tabler:palette',
+      },
+      {
+        title: 'We offer choreographed shows or roaming performances throughout your event',
+        icon: 'tabler:repeat',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Daytime Flow Performance',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Daytime Flow Arts</h3>
+    </Fragment>
+  </Content>
+
+  <!-- Aerial Performance -->
+  <Content
+    isReversed
+    isAfterContent
+    items={[
+      {
+        title: 'Perfect for outdoors or indoors with ceilings 8 feet or higher',
+        icon: 'tabler:building',
+      },
+      {
+        title: 'Combining strength, flexibility & grace for a daring performance from above',
+        icon: 'tabler:gymnastics',
+      },
+      {
+        title: 'Daring acrobatics and gorgeous dancing',
+        icon: 'tabler:brand-twitter',
+      },
+      {
+        title: 'Option for aerial bartending',
+        icon: 'tabler:glass',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Aerial Performance',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Aerial Arts</h3>
+      <p class="text-muted dark:text-slate-400 mb-6">
+        Breathtaking aerial performances that defy gravity, combining athleticism and artistry to create truly memorable moments.
+      </p>
+    </Fragment>
+  </Content>
+
+  <!-- <Features title="Why Choose Us" items={[
     { title: 'Local Expertise', description: 'Based in Philadelphia since 2010.' },
     { title: 'Quality Work', description: 'Certified professionals only.' },
     { title: 'Fast Turnaround', description: 'Projects completed in days, not weeks.' },
-  ]} />
+  ]} /> -->
 
   <CallToAction title="Ready to start?" subtitle="Contact us today for a free consultation." />
+  
 </Layout>
