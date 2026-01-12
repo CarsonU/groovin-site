@@ -11,3 +11,15 @@ export const headerData = {
     { text: 'GigSalad', href: 'https://www.gigsalad.com/the_groovin_embers_hammonton', icon: 'tabler:salad', ariaLabel: 'Book us on GigSalad' }
   ],
 };
+
+export const footerData = {
+  links: [],
+  secondaryLinks: [],
+  socialLinks: [
+    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/groovin_embers/' },
+    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/groovin.embers/' },
+  ],
+  footNote: `
+    &copy; 2024 Groovin' Embers · All rights reserved.
+  `,
+};

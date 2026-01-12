@@ -7,7 +7,7 @@
     background-color: var(--aw-color-bg-page);
   }
   .bg-dark {
-    background-color: #1D0066; /* Match header scroll color */
+    background-color: #110A1D; /* Deep dark purple */
   }
   .bg-light {
     background-color: var(--aw-color-bg-page);
@@ -44,7 +44,7 @@
 }
 .dark #header.scroll > div:first-child,
 #header.scroll.dark > div:first-child {
-  @apply bg-page md:bg-[#1D0066e6] border-b border-gray-500/20;
+  @apply bg-page md:bg-[#110A1De6] border-b border-[#60395E]/30;
   box-shadow: none;
 }
 /* #header.scroll > div:last-child {

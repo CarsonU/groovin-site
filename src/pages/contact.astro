@@ -1,6 +1,6 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import HeroText from '~/components/widgets/HeroText.astro';
+import Hero from '~/components/widgets/Hero.astro';
 import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 
@@ -10,14 +10,16 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <!-- HeroText Widget ******************* -->
-
-  <HeroText tagline="Contact" title="Let's Connect!" />
+  <Hero
+    tagline="Contact"
+    title="Let's Connect!"
+    subtitle="Ready to add some fire to your next event? We'd love to hear from you."
+  />
 
   <ContactUs
     id="form"
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
+    title="Send us a message"
+    subtitle="Tell us about your event and we'll get back to you within 24 hours."
     inputs={[
       {
         type: 'text',
@@ -29,50 +31,34 @@ const metadata = {
         name: 'email',
         label: 'Email',
       },
+      {
+        type: 'text',
+        name: 'event_date',
+        label: 'Event Date (optional)',
+      },
     ]}
     textarea={{
-      label: 'Message',
+      label: 'Tell us about your event',
     }}
     disclaimer={{
-      label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
+      label: 'By submitting this form, you agree to be contacted about your inquiry.',
     }}
-    description="Our support team typically responds within 24 business hours."
+    description="We typically respond within 24 hours."
   />
 
-  <!-- Features2 Widget ************** -->
-
   <Features2
-    title="We are here to help!"
+    title="Other ways to reach us"
+    columns={2}
     items={[
       {
-        title: 'General support',
-        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
-      },
-      {
-        title: 'Contact sales',
-        description:
-          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
-      },
-      {
-        title: 'Technical support',
-        description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
-      },
-      {
-        title: 'Phone',
-        description: '+1 (234) 567-890',
-        icon: 'tabler:headset',
-      },
-      {
         title: 'Email',
-        description: 'contact@support.com',
+        description: 'groovinembers@example.com',
         icon: 'tabler:mail',
       },
       {
-        title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
-        icon: 'tabler:map-pin',
+        title: 'Social Media',
+        description: 'Find us on Instagram and Facebook @groovin_embers',
+        icon: 'tabler:brand-instagram',
       },
     ]}
   />

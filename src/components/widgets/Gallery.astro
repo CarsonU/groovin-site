@@ -1,0 +1,71 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import 'photoswipe/style.css';
+
+interface ImageProps {
+  src: ImageMetadata;
+  alt: string;
+}
+
+interface Props {
+  images: ImageProps[];
+}
+
+const { images } = Astro.props;
+---
+
+<div class="gallery-container p-4 mx-auto max-w-7xl" id="gallery--getting-started">
+  <div class="pswp-gallery masonry-grid" id="my-gallery">
+    {
+      images.map((image) => (
+        <a
+          href={image.src.src}
+          data-pswp-width={image.src.width}
+          data-pswp-height={image.src.height}
+          target="_blank"
+          class="masonry-item mb-4 block overflow-hidden rounded-lg shadow-md transition-transform hover:scale-[1.02]"
+        >
+          <Image src={image.src} alt={image.alt} width={600} class="w-full h-auto object-cover rounded-lg" />
+        </a>
+      ))
+    }
+  </div>
+</div>
+
+<script>
+  import PhotoSwipeLightbox from 'photoswipe/lightbox';
+
+  const lightbox = new PhotoSwipeLightbox({
+    gallery: '#my-gallery',
+    children: 'a',
+    pswpModule: () => import('photoswipe'),
+  });
+
+  lightbox.init();
+</script>
+
+<style>
+  .masonry-grid {
+    column-count: 1;
+    column-gap: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .masonry-grid {
+      column-count: 2;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .masonry-grid {
+      column-count: 3;
+    }
+  }
+
+  /* Prevent break inside items */
+  .masonry-item {
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+  }
+</style>

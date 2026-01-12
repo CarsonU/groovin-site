@@ -1,7 +1,7 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Features from '~/components/widgets/Features.astro';
+
 import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
@@ -17,7 +17,11 @@ const metadata = { title: 'Groovin Embers | Fire and Flow' };
   <Hero actions={[{ variant: 'primary', text: 'Book Us', href: '/contact' }]}>
     <Fragment slot="title">Groovin' Embers</Fragment>
     <Fragment slot="bg">
-      <div class="absolute inset-0 md:-top-[76px] md:h-[calc(100%+76px)] bg-cover bg-center bg-no-repeat" style="background-image: url('/images/hero.jpg');"></div>
+      <div
+        class="absolute inset-0 md:-top-[76px] md:h-[calc(100%+76px)] bg-cover bg-center bg-no-repeat"
+        style="background-image: url('/images/hero.jpg');"
+      >
+      </div>
       <div class="absolute inset-0 md:-top-[76px] md:h-[calc(100%+76px)] bg-black/50"></div>
     </Fragment>
   </Hero>
@@ -25,17 +29,14 @@ const metadata = { title: 'Groovin Embers | Fire and Flow' };
   <!-- About Section -->
   <Content isReversed>
     <Fragment slot="content">
-      The Groovin' Embers are a female flow and fire duo that's been lighting up the East Coast for the past 5 years. 
-      We put on spectacular circus showcases that combine choreography, acrobatics, and prop mastery. Our captivating shows are completely customizable, from 
-      our costumes to stationary or roaming performances. Our skilled artists specialize in fire manipulation, aerial arts, and various flow props that 
-      are guaranteed to enchant you. We believe flow arts elevates every event, adding a truly unforgettable element. Allow us to wow you!
+      The Groovin' Embers are a female flow and fire duo that's been lighting up the East Coast for the past 5 years. We
+      put on spectacular circus showcases that combine choreography, acrobatics, and prop mastery. Our captivating shows
+      are completely customizable, from our costumes to stationary or roaming performances. Our skilled artists
+      specialize in fire manipulation, aerial arts, and various flow props that are guaranteed to enchant you. We
+      believe flow arts elevates every event, adding a truly unforgettable element. Allow us to wow you!
     </Fragment>
     <Fragment slot="image">
-      <img
-        src="/images/soph-janice-1.jpg"
-        alt="Fire performance"
-        class="rounded-lg shadow-lg"
-      />
+      <img src="/images/soph-janice-1.jpg" alt="Fire performance" class="rounded-lg shadow-lg" />
     </Fragment>
   </Content>
 
@@ -175,9 +176,6 @@ const metadata = { title: 'Groovin Embers | Fire and Flow' };
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Aerial Arts</h3>
-      <p class="text-muted dark:text-slate-400 mb-6">
-        Breathtaking aerial performances that defy gravity, combining athleticism and artistry to create truly memorable moments.
-      </p>
     </Fragment>
   </Content>
 
@@ -187,6 +185,9 @@ const metadata = { title: 'Groovin Embers | Fire and Flow' };
     { title: 'Fast Turnaround', description: 'Projects completed in days, not weeks.' },
   ]} /> -->
 
-  <CallToAction title="Ready to start?" subtitle="Contact us today for a free consultation." />
-  
+  <CallToAction
+    title="Ready to book?"
+    subtitle="Contact us today discuss your event."
+    actions={[{ variant: 'primary', text: 'Contact Us', href: '/contact' }]}
+  />
 </Layout>
